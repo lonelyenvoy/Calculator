@@ -136,8 +136,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if (expr.equals("0")) return;
         try {
             String result = ExpressionUtils.compute(expr).toPlainString();
-            if (result.length() > 30) {
-                result = result.substring(0, 30) + "...";
+            if (result.length() > 25) {
+                result = result.substring(0, 25) + "...";
             }
             resultTextView.setText("= " + result);
         } catch (EmptyExpressionException | IllegalExpressionException
