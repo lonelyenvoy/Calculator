@@ -20,7 +20,11 @@ class ExpressionUtils {
         if (!isValidExpression(expr) || !braceMatches(expr)) {
             throw new IllegalExpressionException();
         }
-        return _compute(convertToPostFix(expr)).stripTrailingZeros();
+        expr = convertToPostFix(expr);
+        if (expr.length() == 0) {
+            throw new EmptyExpressionException();
+        }
+        return _compute(expr).stripTrailingZeros();
     }
 
     private static String preprocessExpression(String expr) {
@@ -80,8 +84,8 @@ class ExpressionUtils {
             }
         }
 
-        if (numberStack.size() > 1) {
-            throw new InvalidComputationException(); // more than 1 number in stack, invalid computation
+        if (numberStack.size() != 1) {
+            throw new InvalidComputationException(); // more than 1 number in stack or no number left, invalid computation
         }
         return numberStack.peek(); // the last number in stack is result
     }

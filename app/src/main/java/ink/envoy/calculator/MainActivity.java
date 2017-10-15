@@ -53,8 +53,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         bindViews();
         setOnClickListeners();
 
-        inputTextView.setText("0");
-        resultTextView.setText("");
+        clearTextViews();
     }
 
     private void bindViews() {
@@ -118,6 +117,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         commandEqualButton.setOnClickListener(this);
         commandBackspaceButton.setOnClickListener(this);
         commandClearButton.setOnClickListener(this);
+    }
+
+    private void clearTextViews() {
+        inputTextView.setText("0");
+        resultTextView.setText("");
     }
 
     private void activateEqualView() {
@@ -201,15 +205,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 deactivateEqualView();
                 String text = inputTextView.getText().toString();
                 int length = text.length();
-                if (length > 0) {
+                if (length > 1) {
                     inputTextView.setText(text.subSequence(0, length - 1));
+                } else {
+                    clearTextViews();
                 }
                 break;
 
             case R.id.commandClearButton:
                 deactivateEqualView();
-                inputTextView.setText("0");
-                resultTextView.setText("");
+                clearTextViews();
                 break;
 
             case R.id.commandEqualButton:
