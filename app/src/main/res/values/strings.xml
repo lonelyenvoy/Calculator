@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Calculator</string>
+    <string name="operator_add">＋</string>
+    <string name="operator_subtract">-</string>
+    <string name="operator_multiply">×</string>
+    <string name="operator_divide">÷</string>
+    <string name="operator_negate">±</string>
+</resources>
