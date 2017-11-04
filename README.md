@@ -1,7 +1,10 @@
 # Calculator
 A simple calculator for Android
 
-![App icon](https://github.com/lonelyenvoy/Calculator/raw/master/resources/icon.png)
+<img src="resources/icon.png" width="120" alt="App icon" />
+
+### Demo
+<img src="resources/app-function-demo.gif" width="350" alt="App Demo" />
 
 ### Download
 You may download the android apk file <a href="http://envoy-public.oss-cn-shenzhen.aliyuncs.com/runnable/calculator.apk" target="_blank">here</a>, or scan the QR code below:
