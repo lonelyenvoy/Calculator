@@ -1,7 +1,7 @@
 # Calculator
 A simple calculator for Android
 
-<img src="resources/icon.png" width="120" alt="App icon" />
+<img src="resources/icon.png" width="150" alt="App icon" />
 
 ### Demo
 <img src="resources/app-function-demo.gif" width="350" alt="App Demo" />
